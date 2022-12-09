@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 550px;
+  aspect-ratio: 16/9;
+
+  padding: 15px;
+}
+
+.piano-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+}
+
+.piano-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+}
+
+.volume-container {
+  display: flex;
+  align-items: ccenter;
+  justify-content: center;
+}
+
+.volume-container span {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.volume-container input {
+  cursor: pointer;
+}
+
+.keys-container {
+  width: 100%;
+  height: 80%;
+
+  display: flex;
+  position: relative;
+}
+
+.keys-white {
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: flex-end;
+text-transform: uppercase;
+ flex-grow: 1;
+ background-color: white;
+ color: grey;
+ margin: 0 1px;
+ border-radius: 7px;
+ padding: 15px 0;
+ cursor: pointer;
+ box-shadow: 0 -4px 0px rgba(0, 0, 0, 0.364) inset;
+}
+
+.keys-black {
+  position: absolute;
+  background-color: black;
+  height: 100px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 15px 0;
+  border-radius: 0 0 7px 7px;
+  text-transform: uppercase;
+  color: grey;
+  cursor: pointer;
+  box-shadow: 0 -3px 0 0 rgb(91 91 91) inset;
+}
+
+.keys-black:active {
+  box-shadow: none;
+  background: linear-gradient(to bottom, black, rgb(45,45,45));
+}
+
+.keys-white:active {
+  box-shadow: none;
+  background: linear-gradient(to bottom, white, rgb(221, 217, 217));
+}
+
+
+#w {
+  left: 7.5%;
+}
+
+#e {
+  left: 17.3%;
+}
+
+#t {
+  left: 37.4%;
+}
+
+#y {
+  left: 47.9%;
+}
+
+#u {
+  right: 35%;
+}
+#o {
+  right: 15.5%;
+}
+#p{
+  right: 6%;
+}
+
+@media screen and (max-width:500px) {
+ .container {
+  rotate: 90deg;
+  flex-shrink: 0;
+  width: 450px;
+ }
+
+ #w {
+  left: 7%;
+}
+
+#t {
+  left: 37.1%;
+}
+
+#y {
+  left: 47.2%;
+}
+
+#u {
+  right: 34.3%;
+}
+
+#p {
+  right: 5.3%;
+}
+
+}
